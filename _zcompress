@@ -1,2 +1,6 @@
 #compdef zcompress
 #autoload
+_arguments \
+    "::folder"\
+    "*::archive file:_files"\
+        && return 0
