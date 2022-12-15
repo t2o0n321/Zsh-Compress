@@ -3,18 +3,18 @@
 # Installation
 1. Clone the repository
     ```
-    git clone https://github.com/t2o0n321/Zsh-Compress.git ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/compress
+    git clone https://github.com/t2o0n321/Zsh-Compress.git ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zcompress
     ```
 2. Add it to ``~/.zshrc``
     ```
     plugins=( 
         ...
-        compress
+        zcompress
     )
     ```
 # Usage
 ```
-compress [目標資料夾] [輸出檔案]
+zcompress [目標資料夾] [輸出檔案]
 ```
 # Supported Compression Format
 - ``.rar``

@@ -1,5 +1,5 @@
 help(){
-	echo "- Usage: compress [targetFile] [outFile]"
+	echo "- Usage: zcompress [targetFile] [outFile]"
 }
 
 getExt(){
@@ -18,7 +18,9 @@ checkCommand(){
 	fi
 }
 
-compress(){
+alias zc=zcompress
+
+zcompress(){
 	# Pending Input
 	if ! [ "$#" -ge 2 ]; then
 		echo "Syntax error"
