@@ -16,6 +16,10 @@
 ```
 zcompress [目標資料夾] [輸出檔案]
 ```
+or
+```
+zc [目標資料夾] [輸出檔案]
+```
 # Supported Compression Format
 - ``.rar``
 - ``.zip``
