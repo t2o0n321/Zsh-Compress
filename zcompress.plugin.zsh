@@ -92,7 +92,7 @@ zcompress() {
       zip -r "$outFilePath" "$targetFolder"
       ;;
     7z)
-      zcompress::install_dependency 7z p7zip-full || return 1
+      zcompress::install_dependency 7z p7zip || return 1
       7z a "$outFilePath" "$targetFolder"
       ;;
     bz2)
