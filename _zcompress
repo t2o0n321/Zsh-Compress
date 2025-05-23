@@ -1,6 +1,17 @@
-#compdef zcompress
-#autoload
-_arguments \
-    "::folder"\
-    "*::archive file:_files"\
-        && return 0
+#compdef zcompress zextract
+
+local -a supported_extensions
+supported_extensions=(zip rar 7z tar tar.gz tgz tar.xz bz2)
+
+case $service in
+  zcompress)
+    _arguments \
+      '1:target file or directory:_files' \
+      "2:output file:_files -g \"*.(${(j:|:)supported_extensions})\""
+    ;;
+  zextract)
+    _arguments \
+      "1:archive file:_files -g \"*.(${(j:|:)supported_extensions})\"" \
+      '2:destination directory:_files -/ -g "*(-/)"'
+    ;;
+esac
