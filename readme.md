@@ -4,7 +4,7 @@
 # Installation
 1. Clone the repository
     ```
-    git clone http://gitlab.lan/t2o0n321/Zsh-Compress.git ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zcompress
+    git clone http://github.com/t2o0n321/Zsh-Compress.git ${ZSH_CUSTOM:-~/.oh-my-zsh}/plugins/zcompress
     ```
 2. Add it to ``~/.zshrc``
     ```
