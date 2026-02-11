@@ -1,9 +1,18 @@
-#compdef zcompress zextract
+#compdef zcompress zextract zc zx
 
 local -a supported_extensions
-supported_extensions=(zip rar 7z tar tar.gz tgz tar.xz bz2)
+supported_extensions=(
+  tar.zst tar.bz2 tar.gz tar.xz
+  tbz2 tgz tzst
+  zip rar 7z tar
+  gz bz2 xz zst
+)
 
-case $service in
+local current_service="$service"
+[[ "$current_service" == "zc" ]] && current_service="zcompress"
+[[ "$current_service" == "zx" ]] && current_service="zextract"
+
+case "$current_service" in
   zcompress)
     _arguments \
       '1:target file or directory:_files' \
